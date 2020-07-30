@@ -9,7 +9,7 @@ It also has a couple tweaks, such as custom directories, better dpendency compat
 Clone the repository and make setup.sh executable and run it:
 
 ```shell
-git clone https://git.rinri-d.xyz/rinri/cpsrc.git
+git clone https://github.com/Madiwka4/cpsrc.git
 cd cpsrc
 chmod +x setup.sh
 ./setup.sh
