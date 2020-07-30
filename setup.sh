@@ -1,18 +1,41 @@
+echo "Your distro? ( 1)Arch, 2)Debian): "
+read distro
+if [ $distro -eq 1 ]
+then 
+    sudo pacman -Syu g++ code
+elif [ $distro -eq 2 ]
+then
+    sudo apt update
+    sudo apt upgrade 
+    sudo apt install g++ code
+	
+else 
+    echo "Please install these packages manually: Code, G++"
+    read -p "Press enter to continue" A	
+fi
+
+    read -r -p "${1:-Set custom directory for code? [y/N]} " response
+    case "$response" in
+        [yY][eE][sS]|[yY]) 
+	    echo "Enter directory for files:"
+            read DIR
+		echo "set dir as $DIR"
+            ;;
+        *)
+            echo "Setting this directory"
+            ;;
+    esac
+
 # create.sh
-echo $'cp template.cpp $1.cpp\nnvim -s .gg $1.cpp' > create.sh
+echo 'cp template.cpp $1.cpp \n code $1.cpp' > $DIR/create.sh
 
 # template
-read -n 1 -r -s -p $'Press any key to create template file...\n'
-nvim template.cpp
-
-# start line
-read -p $'Enter starting line of cursor:\n' line
-((line=line-1))
-echo "$line"gg > .gg
+read -p "Press enter to create template" A
+code $DIR/template.cpp
 
 # run.sh
-echo $'g++ -g $1\n./a.out' > run.sh
+echo 'g++ -o $1.out -g $1.cpp\n./$1.out' > $DIR/run.sh
 
 # make all executable
-chmod +x create.sh
-chmod +x run.sh
+chmod +x $DIR/create.sh
+chmod +x $DIR/run.sh
