@@ -14,8 +14,9 @@ cd cpsrc
 chmod +x setup.sh
 ./setup.sh
 ```
-
-First, you are given the choise to enter your custom directory, for example, 
+First, you have to choose your default text editor. You can set any editor you want, as long as it supports opening files using the "editor file" type shell command. 
+Then, you can choose the package name of the editor. This makes sure that the editor is up to date. 
+After that, you are given the choise to enter your custom directory, for example, 
 
 ```
 Enter custom directory for code? [y/N] y
