@@ -1,6 +1,6 @@
 # Overview
 
-This is a fork of RinRi's <a href="https://github.com/RinRi-D/cpsrc">cpsrc</a>, but made to be compatible with Debian based Operating Systems, and use Visual Studio Code instead of neovim.
+This is a fork of RinRi's <a href="https://github.com/RinRi-D/cpsrc">cpsrc</a>, but made to be compatible with Debian based Operating Systems, and use *ANY* editor instead of just neovim. 
 
 It also has a couple tweaks, such as custom directories, better dpendency compatibility, and custom program names.
 
